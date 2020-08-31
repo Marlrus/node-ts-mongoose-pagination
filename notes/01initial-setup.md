@@ -38,6 +38,8 @@ To stop or restart mongo you use the respective stop or restart commands.
 
 To use the shell we just ron `mongo`.
 
+As an additional note, you can set up the process to **execute automatically at booting**. It takes 61MB of RAM.
+
 ### Throuble shooting.
 
 My service was not starting, and it was exiting with a status code of 14 that gave no useful information. Thankfully [this article](https://medium.com/@adhityad3v/mongodb-code-exited-status-14-f9f9f3d3e244) saved me. I had to find a .sock file inside temp:
@@ -69,3 +71,15 @@ We run `db.user.find()` it will return every document inside the user collection
 I create another use with **db.user.insert()** and then run find and get both items. Afterwards I run find() with a filter `db.user.find({ user: "moerse" })` which will only return the document that matches.
 
 ## update and remove UD
+
+We can update a document using **db.user.update()** which takes 2 arguments, the selector, and the update. `db.user.update({name: "moerse"}, {age: 30})` which we can see that updated the document, however **we removed every other property and now the document just has age 30**. To fix this we run `db.user.update({age: 30}, {$set: {name: 'moerse'}})` and now we fixed the document and updated it using the mongoDB operator.
+
+To remove a document we do `db.user.remove({name: "marmot"})` which will remove the document that matches the query. **If many documents match the query, it will remove all of them**. We can use .limit() to limit this, but by default it will eliminate them all.
+
+## drop and show collections
+
+I ran `db.user.drop()` which eliminated the entire collections. Then I ran `show collections` and there where no collections in the DB anymore, creating a clean slate for the new DB created from within the server using mongoose.
+
+## Dotenv blunder
+
+I had my .env file inside the src/ folder, so my server was running in dist and couldn't find the strings. Fortunately it was taken care of.
