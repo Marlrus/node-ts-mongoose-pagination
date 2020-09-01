@@ -11,7 +11,7 @@ export interface CreatureInterface {
    friends: string[];
 }
 
-const temepraments = [
+export const temepraments = [
    'melancholic',
    'choleric',
    'sanguine',
@@ -39,7 +39,7 @@ const temepraments = [
    'calm',
 ];
 
-const creatureTypes = [
+export const creatureTypes = [
    'sea',
    'river',
    'lake',
@@ -65,7 +65,7 @@ const creatureTypes = [
    'stepe',
 ];
 
-const creatureFeatures = [
+export const creatureFeatures = [
    'sneaky',
    'schemy',
    'fiesty',
@@ -94,7 +94,7 @@ const creatureFeatures = [
    'sleepy',
 ];
 
-const hobbies = [
+export const hobbies = [
    'eating',
    'sleeping',
    'cooking',
@@ -128,7 +128,7 @@ const hobbies = [
    'coloring',
 ];
 
-const maleFirstNames = [
+export const maleFirstNames = [
    'liam',
    'noah',
    'william',
@@ -180,7 +180,7 @@ const maleFirstNames = [
    'leo',
 ];
 
-const femaleFirstNames = [
+export const femaleFirstNames = [
    'emma',
    'olivia',
    'ava',
@@ -233,7 +233,7 @@ const femaleFirstNames = [
    'skylar',
 ];
 
-const americanLastNames = [
+export const americanLastNames = [
    'smith',
    'johnson',
    'williams',

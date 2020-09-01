@@ -13,6 +13,11 @@ import dotenv from 'dotenv';
 //Routes
 import routes from './routes/index-routes';
 
+//Utils
+import { test } from './models/creature/creature.utils';
+
+test();
+
 dotenv.config();
 
 const app = express();

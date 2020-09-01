@@ -1,8 +1,9 @@
 import mongoose from 'mongoose';
-import { CreatureInterface } from './creature-creator';
+import { CreatureInterface } from './creature.types';
 
 const creatureSchema = new mongoose.Schema({
    name: String,
+   gender: String,
    email: String,
    type: String,
    temperament: String,

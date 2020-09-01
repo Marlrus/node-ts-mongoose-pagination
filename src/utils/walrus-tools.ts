@@ -144,6 +144,13 @@ export const capitalizeAll = (sentence: string, ...exceptions: string[]) =>
 // Price utils ?
 
 /*=====================
+	NUMBER Utils
+======================*/
+
+export const randomInt = (end: number, start = 0) =>
+   Math.round(Math.random() * (end - start) + start);
+
+/*=====================
 	Getters
 ======================*/
 
