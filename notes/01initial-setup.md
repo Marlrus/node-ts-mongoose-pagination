@@ -19,7 +19,7 @@ I installed the MongoDB community version for Focal Fossa. The procedure is well
 1. Get the repo with the GPG key.
 2. Create a list file for MongoDB
 3. Reload the package DB with `sudo apt-get update`
-4. Install MongoDB Packages with `` s`udo apt-get install -y mongodb-org ``
+4. Install MongoDB Packages with `sudo apt-get install -y mongodb-org`
 
 ### Running MongoDB
 
