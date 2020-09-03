@@ -150,6 +150,12 @@ export const capitalizeAll = (sentence: string, ...exceptions: string[]) =>
 export const randomInt = (end: number, start = 0) =>
    Math.round(Math.random() * (end - start) + start);
 
+export const percentChance = (percent: number) => {
+   if (percent > 100 || percent < 0)
+      err('percent must be a number between 0 - 100');
+   return Math.random() * 100 <= percent ? true : false;
+};
+
 /*=====================
 	Getters
 ======================*/
